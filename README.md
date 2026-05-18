@@ -123,6 +123,7 @@ The current `__main__` block runs the tuned Layer 1 plus Layer 2 policy with:
 - `seed_offset = 0`
 - `gamma = 0.72`
 - three-piece Layer 1 coefficients for both directions
+
 It writes:
 ```text
 outputs/m3_72.csv
