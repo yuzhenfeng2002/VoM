@@ -300,7 +300,7 @@ def make_tuned_action(env: Environment, is_naive=False, coeffs_up=None, coeffs_d
 
         if not layer1_counts:
             return
-        move_decisions, idle_decisions = optimizer.solve(layer1_counts, coeffs_up=coeffs_up, coeffs_dn=coeffs_dn) # 暂时不加系数
+        move_decisions, idle_decisions = optimizer.solve(layer1_counts, coeffs_up=coeffs_up, coeffs_dn=coeffs_dn)
 
         # Output the optimized decisions
         processed_counts = {}
