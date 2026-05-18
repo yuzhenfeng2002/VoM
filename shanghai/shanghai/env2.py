@@ -193,6 +193,8 @@ class Environment:
         moving_cost = 0
         moving_group = {} # group modules by (stop, direction)
         for m in self.modules:
+            if m.new_direction == IDLE or (m.new_direction == DOWN and m.current_stop == FIRST_STOP) or (m.new_direction == UP and m.current_stop == LAST_STOP):
+                continue
             key = (m.current_stop, m.new_direction) # key for grouping
             moving_group.setdefault(key, []).append(m) # group modules
         for _, ids in moving_group.items(): # calculate moving costs
